@@ -56,6 +56,7 @@ export default function data(project, type) {
             {Header: "note", accessor: "note", align: "center"},
         ],
         rows: type === 'top3' ? project.top3Projects.map(el => {
+
                 return {
                     author: <Author image={team2} name={el.authorName} profileUrl={el.authorId}/>,
                     livePreview: <LivePreview url={el.deploymentLink}/>,

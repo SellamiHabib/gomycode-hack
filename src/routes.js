@@ -39,7 +39,7 @@
 import Dashboard from "layouts/dashboard";
 import Tables from "layouts/tables";
 import Notifications from "layouts/notifications";
-import Profile from "layouts/profile";
+import Profile from "layouts/motivation/pages/profile";
 import Motivation from "layouts/motivation"
 // @mui icons
 import Icon from "@mui/material/Icon";
@@ -79,20 +79,19 @@ const routes = [
         component: <Notifications/>,
     },
     {
-        type: "collapse",
-        name: "Profile",
-        key: "profile",
-        icon: <Icon fontSize="small">person</Icon>,
-        route: "/profile",
-        component: <Profile/>,
-    },
-    {
         type: "",
         name: "Profile",
         key: "profile",
         icon: <Icon fontSize="small">person</Icon>,
-        route: "/profile1/:id",
+        route: "/user/:id",
         component: <Profile/>,
+    },
+    {
+        type: "",
+        name: "badges",
+        key: "badges",
+        route: "/user/:id/badges",
+        // component: <BadgesPage/>,
     }
 ];
 

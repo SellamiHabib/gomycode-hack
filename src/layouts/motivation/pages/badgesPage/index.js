@@ -36,11 +36,11 @@ import ProfilesList from "examples/Lists/ProfilesList";
 import DefaultProjectCard from "examples/Cards/ProjectCards/DefaultProjectCard";
 
 // Overview page components
-import Header from "layouts/profile/components/Header";
-import PlatformSettings from "layouts/profile/components/PlatformSettings";
+import Header from "layouts/motivation/pages/profile/components/Header";
+import BadgesSection from "layouts/motivation/pages/profile/components/BadgesSection";
 
 // Data
-import profilesListData from "layouts/profile/data/profilesListData";
+import profilesListData from "layouts/motivation/pages/profile/data/profilesListData";
 
 // Images
 import homeDecor1 from "assets/images/home-decor-1.jpg";
@@ -63,7 +63,7 @@ function Overview() {
                 <MDBox mt={5} mb={3}>
                     <Grid container spacing={1}>
                         <Grid item xs={12} md={6} xl={4}>
-                            <PlatformSettings/>
+                            <BadgesSection/>
                         </Grid>
                         <Grid item xs={12} md={6} xl={4} sx={{display: "flex"}}>
                             <Divider orientation="vertical" sx={{ml: -2, mr: 1}}/>

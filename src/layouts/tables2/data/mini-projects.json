@@ -1,0 +1,40 @@
+[
+  {
+    "id": 0,
+    "title": "React track",
+    "topMonthlyproject": {
+      "authorId": 0,
+      "authorName": "Foulen Ben Foulen",
+      "authorImg": "assets/images/team-3.jpg",
+      "note": 8,
+      "githubLink": "https://github.com/Jason-B-Jiang/Recipes-Website",
+      "deploymentLink": "https://appletri.github.io/odin-recipes/"
+    },
+    "top3Projects": [
+      {
+        "authorId": 0,
+        "authorName": "Habib Sellami",
+        "authorImg": "assets/images/team-3.jpg",
+        "note": 10,
+        "githubLink": "https://github.com/Jason-B-Jiang/Recipes-Website",
+        "deploymentLink": "https://appletri.github.io/odin-recipes/"
+      },
+      {
+        "authorId": 1,
+        "authorName": "Omar Jabloun",
+        "authorImg": "assets/images/team-4.jpg",
+        "note": 9.9,
+        "githubLink": "https://github.com/dipps18/odin-recipes",
+        "deploymentLink": "https://dipps18.github.io/odin-recipes/"
+      },
+      {
+        "authorId": 3,
+        "authorName": "Anas Cherni",
+        "authorImg": "assets/images/team-2.jpg",
+        "note": 9.8,
+        "githubLink": "https://github.com/Souriat/odin-recipes",
+        "deploymentLink": "https://souriat.github.io/odin-recipes/"
+      }
+    ]
+  }
+]

@@ -40,11 +40,20 @@ import Dashboard from "layouts/dashboard";
 import Tables from "layouts/tables";
 import Notifications from "layouts/notifications";
 import Profile from "layouts/profile";
-
+import Tables2 from "layouts/tables2"
 // @mui icons
 import Icon from "@mui/material/Icon";
 
 const routes = [
+
+  {
+    type: "collapse",
+    name: "newTables",
+    key: "newTables",
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "/tables2",
+    component: <Tables2 />,
+  },
   {
     type: "collapse",
     name: "Dashboard",

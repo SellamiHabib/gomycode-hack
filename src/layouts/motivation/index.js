@@ -26,23 +26,24 @@ import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 import DataTable from "examples/Tables/DataTable";
-
+import MDSnackbar from "components/MDSnackbar";
 // Data
 import projects from './data/mini-projects.json';
 import projectShowcaseTable from "layouts/motivation/data/authorsTableData";
+import {useState} from "react";
 
 
 function Tables() {
     const top3Projects = projectShowcaseTable(projects[0], 'top3');
-    const topMonthlyProject= projectShowcaseTable(projects[0], 'monthly');
-
+    const topMonthlyProject = projectShowcaseTable(projects[0], 'monthly');
+    const [open, setOpen] = useState(true);
     return (
         <DashboardLayout>
             <DashboardNavbar/>
             <MDBox pt={6} pb={3}>
 
                 <Grid container spacing={6}>
-                    <Grid item xs={12} >
+                    <Grid item xs={12}>
                         <Card>
                             <MDBox
                                 mx={2}
@@ -58,13 +59,30 @@ function Tables() {
                                     [Checkpoint]: Build a recipes website
                                 </MDTypography>
                             </MDBox>
+
+
+                            <MDSnackbar
+                                color="info"
+                                icon="notifications"
+                                title="Quick survey"
+                                content='
+                            take a quick survey to give feedback so we can improve the content'
+                                close={() => {
+                                    setOpen(false)
+                                }}
+                                open={open}
+
+                            />
                             <MDBox p={5} lineHeight={0}>
 
                                 <MDTypography variant="button" color="text" fontWeight="regular">
-                                    It’s time to practice all of the HTML knowledge you have acquired. In this project, you are going to build a basic recipe website.
-                                    <br />
-                                    <br />
-                                    The website will consist of a main index page which will have links to a few recipes. The website won’t look very pretty by the time you’ve finished. Not unless you’re into brutalist web design, that is.
+                                    It’s time to practice all of the HTML knowledge you have acquired. In this project,
+                                    you are going to build a basic recipe website.
+                                    <br/>
+                                    <br/>
+                                    The website will consist of a main index page which will have links to a few
+                                    recipes. The website won’t look very pretty by the time you’ve finished. Not unless
+                                    you’re into brutalist web design, that is.
                                 </MDTypography>
                             </MDBox>
                         </Card>
@@ -108,8 +126,8 @@ function Tables() {
                                 borderRadius="lg"
                                 coloredShadow="info"
                             >
-                                <MDTypography variant="h6" color="white">
-                                    Top rated project this month
+                                < MDTypography variant="h6" color="white">
+                                    The first submission this session
                                 </MDTypography>
                             </MDBox>
                             <MDBox pt={3}>

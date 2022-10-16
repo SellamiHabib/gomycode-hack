@@ -36,8 +36,7 @@
  */
 
 // Material Dashboard 2 React layouts
-import Dashboard from "layouts/dashboard";
-import Tables from "layouts/tables";
+
 import Profile from "layouts/motivation/pages/profile";
 import Motivation from "layouts/motivation"
 // @mui icons
@@ -49,27 +48,11 @@ const routes = [
 
     {
         type: "collapse",
-        name: "Motivation axe",
+        name: "Motivation improvements workflow",
         key: "motivation",
         icon: <Icon fontSize="small">table_view</Icon>,
         route: "/motivation",
         component: <Motivation/>,
-    },
-    {
-        type: "collapse",
-        name: "Dashboard",
-        key: "dashboard",
-        icon: <Icon fontSize="small">dashboard</Icon>,
-        route: "/dashboard",
-        component: <Dashboard/>,
-    },
-    {
-        type: "collapse",
-        name: "Tables",
-        key: "tables",
-        icon: <Icon fontSize="small">table_view</Icon>,
-        route: "/tables",
-        component: <Tables/>,
     },
     {
         type: "",

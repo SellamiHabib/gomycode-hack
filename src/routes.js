@@ -48,7 +48,7 @@ const routes = [
 
     {
         type: "collapse",
-        name: "Motivation improvements workflow",
+        name: "Motivation improvements",
         key: "motivation",
         icon: <Icon fontSize="small">table_view</Icon>,
         route: "/motivation",

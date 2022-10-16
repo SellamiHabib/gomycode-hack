@@ -22,9 +22,8 @@ import MDAvatar from "components/MDAvatar";
 import MDBadge from "components/MDBadge";
 // Images
 import team1 from "assets/images/team-1.jpg";
-import team2 from "assets/images/team-2.jpg";
-import team3 from "assets/images/team-3.jpg";
-import team4 from "assets/images/team-4.jpg";
+import team2 from "assets/images/placeholder.png";
+import team4 from "assets/images/placeholder.png";
 
 export default function data(project, type) {
     const Author = ({image, name, profileUrl}) => (
@@ -72,7 +71,7 @@ export default function data(project, type) {
                 }
             }) :
             [{
-                author: <Author image={team2}
+                author: <Author image={team1}
                                 name={project.topMonthlyproject.authorName}
                                 profileUrl={project.topMonthlyproject.authorId}/>,
                 livePreview: <LivePreview url={project.topMonthlyproject.deploymentLink}/>,

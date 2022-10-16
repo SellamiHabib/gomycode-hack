@@ -40,15 +40,33 @@ import Header from "layouts/motivation/pages/profile/components/Header";
 // Images
 import MDAvatar from "../../../../components/MDAvatar";
 import badges from './data/badges';
+import {useEffect, useState} from "react";
+import {collection, getDocs, query, where} from "firebase/firestore";
+import {db} from "../../../../firebase";
 
 function BadgesPage() {
-    const {id} = useParams();
+     //points retrevial
+    const [points, setPoints] = useState(0)
+    let {id} = useParams();
+    useEffect(() => {
+        id = parseInt(id);
+        const q = query(collection(db, 'users'), where("id", "==", id))
+        const fetchPoints = async (q) => {
+            const querySnapshot = await getDocs(q);
+            setPoints(querySnapshot.docs[0].data().points);
+        }
+        fetchPoints(q)
+            .catch(err => {
+                console.log(err)
+            })
+
+    }, [])
 
     return (
         <DashboardLayout>
             <DashboardNavbar/>
             <MDBox mb={2}/>
-            <Header>
+            <Header points={points}>
                 <MDBox mt={5} mb={3} xl={12}>
                     <MDBox pt={1} pb={2} px={2} lineHeight={1.25}>
                         <MDBox display="flex" alignItems="center" mb={0.5} ml={-1.5}>

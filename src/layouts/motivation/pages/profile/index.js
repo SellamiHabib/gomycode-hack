@@ -51,15 +51,32 @@ import team1 from "assets/images/team-1.jpg";
 import team2 from "assets/images/team-2.jpg";
 import team3 from "assets/images/team-3.jpg";
 import team4 from "assets/images/team-4.jpg";
+import {useEffect, useState} from "react";
+import {collection, getDocs, query, where} from "firebase/firestore";
+import {db} from "../../../../firebase";
 
 function Overview() {
-    const {id} = useParams();
+    //points retrevial
+    const [points, setPoints] = useState(0)
+    let {id} = useParams();
+    useEffect(() => {
+        id = parseInt(id);
+        const q = query(collection(db, 'users'), where("id", "==", id))
+        const fetchPoints = async (q) => {
+            const querySnapshot = await getDocs(q);
+            setPoints(querySnapshot.docs[0].data().points);
+        }
+        fetchPoints(q)
+            .catch(err => {
+                console.log(err)
+            })
 
+    }, [])
     return (
         <DashboardLayout>
             <DashboardNavbar/>
             <MDBox mb={2}/>
-            <Header>
+            <Header points={points}>
                 <MDBox mt={5} mb={3}>
                     <Grid container spacing={1}>
                         <Grid item xs={12} md={6} xl={4}>

@@ -35,14 +35,16 @@ import MDAvatar from "components/MDAvatar";
 import breakpoints from "assets/theme/base/breakpoints";
 
 // Images
-import burceMars from "assets/images/bruce-mars.jpg";
+import burceMars from "assets/images/placeholder.png";
 import backgroundImage from "assets/images/bg-profile.jpeg";
 import {useParams} from "react-router-dom";
+import {collection, query, onSnapshot, where, getDocs} from "firebase/firestore"
+import {db} from '../../../../../../firebase'
 
-function Header({children}) {
+function Header({points,children}) {
     const [tabsOrientation, setTabsOrientation] = useState("horizontal");
     const [tabValue, setTabValue] = useState(0);
-    const {id} = useParams();
+
 
     useEffect(() => {
         // A function that sets the orientation state of the tabs.
@@ -66,6 +68,7 @@ function Header({children}) {
 
     const handleSetTabValue = (event, newValue) => setTabValue(newValue);
 
+    let {id} = useParams();
     return (
         <MDBox position="relative" mb={5}>
             <MDBox
@@ -101,10 +104,7 @@ function Header({children}) {
                     <Grid item>
                         <MDBox height="100%" mt={0.5} lineHeight={1}>
                             <MDTypography variant="h5" fontWeight="medium">
-                                Richard Davis
-                            </MDTypography>
-                            <MDTypography variant="button" color="text" fontWeight="regular">
-                                CEO / Co-Founder
+                                Habib Sellami
                             </MDTypography>
                         </MDBox>
                     </Grid>
@@ -112,7 +112,7 @@ function Header({children}) {
                         <AppBar position="static">
                             <Tabs orientation={tabsOrientation} value={tabValue} onChange={handleSetTabValue}>
                                 <Tab
-                                    label="Points : 3140"
+                                    label={"Points : " + points}
                                     icon={
                                         <Icon fontSize="small" sx={{mt: -0.25}}>
                                             emoji_events

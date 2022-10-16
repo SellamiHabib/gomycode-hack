@@ -16,16 +16,10 @@
 import {useParams} from "react-router-dom";
 // @mui material components
 import Grid from "@mui/material/Grid";
-import Divider from "@mui/material/Divider";
 
-// @mui icons
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
 
 
@@ -42,17 +36,45 @@ import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import Header from "layouts/motivation/pages/profile/components/Header";
 // Data
 
-// Images
-import MDAvatar from "../../../../components/MDAvatar";
+import {db} from '../../../../firebase'
+import {collection, doc, getDocs, query, updateDoc, where} from "firebase/firestore";
+import {useEffect, useState} from "react";
+
+const handleRedeem = async (id, currPoints, setPoints) => {
+
+    const userDocRef = doc(db, 'users', id)
+    try {
+        await updateDoc(userDocRef, {
+            points: currPoints - 1234,
+        })
+        setPoints(currPoints - 1234);
+    } catch (err) {
+        alert(err)
+    }
+}
 
 function Shop() {
-    const {id} = useParams();
+    //points retrevial
+    const [points, setPoints] = useState(0)
+    let {id} = useParams();
+    useEffect(() => {
+        id = parseInt(id);
+        const q = query(collection(db, 'users'), where("id", "==", id))
+        const fetchPoints = async (q) => {
+            const querySnapshot = await getDocs(q);
+            setPoints(querySnapshot.docs[0].data().points);
+        }
+        fetchPoints(q)
+            .catch(err => {
+                console.log(err)
+            })
 
+    }, [])
     return (
         <DashboardLayout>
             <DashboardNavbar/>
             <MDBox mb={2}/>
-            <Header>
+            <Header points={points}>
                 <MDBox mt={5} mb={3} xl={12}>
                     <MDBox pt={1} pb={2} px={2} lineHeight={1.25}>
                         <Grid container xm={12}>
@@ -62,36 +84,55 @@ function Shop() {
                                     icon="apartment"
                                     title="Hackerspace access"
                                     description="Get unlimited access to hackerspace for a month"
-                                    value="10000 points"
+                                    value="1234 points"
                                 />
-                                <MDButton>Redeem</MDButton>
+                                <MDButton onClick={() => {
+                                    handleRedeem(id, points, setPoints)
+                                }}>Redeem</MDButton>
                             </Grid>
                             <Grid item xm={12} xl={4} display='flex' flexDirection='column'>
                                 <DefaultInfoCard
                                     icon="exposure_plus_1"
                                     title="Extra assessment try "
                                     description="Receive another try to submit an assesment after failing it twice"
-                                    value="500 points"
+                                    value="1234 points"
                                 />
-                                <MDButton>Redeem</MDButton>
+                                <MDButton onClick={() => {
+                                    handleRedeem(id, points, setPoints)
+                                }}>Redeem</MDButton>
+                            </Grid>
+                            <Grid item xm={12} xl={4} display='flex' flexDirection='column'>
+                                <DefaultInfoCard
+                                    icon="access_time"
+                                    title="One to one meeting extension"
+                                    description="Get extra time in the next one to one meeting"
+                                    value="1234 points"
+                                />
+                                <MDButton onClick={() => {
+                                    handleRedeem(id, points, setPoints)
+                                }}>Redeem</MDButton>
                             </Grid>
                             <Grid item xm={12} xl={4} display='flex' flexDirection='column'>
                                 <DefaultInfoCard
                                     icon="local_offer"
                                     title="-10% reduction Coupon"
                                     description="Get a 10% discount on your next certificate"
-                                    value="10000 points"
+                                    value="1234 points"
                                 />
-                                <MDButton>Redeem</MDButton>
+                                <MDButton onClick={() => {
+                                    handleRedeem(id, points, setPoints)
+                                }}>Redeem</MDButton>
                             </Grid>
                             <Grid item xm={12} xl={4} display='flex' flexDirection='column'>
                                 <DefaultInfoCard
                                     icon="local_offer"
                                     title="-20% reduction Coupon"
                                     description="Get a 20% discount on your next certificate"
-                                    value="19000 points"
+                                    value="1234 points"
                                 />
-                                <MDButton>Redeem</MDButton>
+                                <MDButton onClick={() => {
+                                    handleRedeem(id, points, setPoints)
+                                }}>Redeem</MDButton>
                             </Grid>
                         </Grid>
 

@@ -38,7 +38,6 @@
 // Material Dashboard 2 React layouts
 import Dashboard from "layouts/dashboard";
 import Tables from "layouts/tables";
-import Notifications from "layouts/notifications";
 import Profile from "layouts/motivation/pages/profile";
 import Motivation from "layouts/motivation"
 // @mui icons
@@ -71,14 +70,6 @@ const routes = [
         icon: <Icon fontSize="small">table_view</Icon>,
         route: "/tables",
         component: <Tables/>,
-    },
-    {
-        type: "collapse",
-        name: "Notifications",
-        key: "notifications",
-        icon: <Icon fontSize="small">notifications</Icon>,
-        route: "/notifications",
-        component: <Notifications/>,
     },
     {
         type: "",

@@ -14,6 +14,10 @@
  */
 
 import {useState, useEffect, useMemo} from "react";
+import { initializeApp } from "firebase/app";
+
+import { getAnalytics } from "firebase/analytics";
+
 
 // react-router components
 import {Routes, Route, Navigate, useLocation} from "react-router-dom";
@@ -54,6 +58,7 @@ import brandWhite from "assets/images/logo-ct.png";
 import brandDark from "assets/images/logo-ct-dark.png";
 
 export default function App() {
+
     const [controller, dispatch] = useMaterialUIController();
     const {
         miniSidenav,

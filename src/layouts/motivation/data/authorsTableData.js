@@ -25,10 +25,10 @@ import team2 from "assets/images/team-1.jpg";
 
 
 export default function data(project, type) {
-    const Author = ({image, name}) => (
+    const Author = ({image, name, profileUrl}) => (
         <MDBox display="flex" alignItems="center" lineHeight={1}>
             <MDAvatar src={image} name={name} size="sm"/>
-            <MDBox ml={2} lineHeight={1}>
+            <MDBox component='a' href={'user/' + profileUrl} ml={2} lineHeight={1}>
                 <MDTypography display="block" variant="button" fontWeight="medium">
                     {name}
                 </MDTypography>
@@ -57,7 +57,7 @@ export default function data(project, type) {
         ],
         rows: type === 'top3' ? project.top3Projects.map(el => {
                 return {
-                    author: <Author image={team2} name={el.authorName}/>,
+                    author: <Author image={team2} name={el.authorName} profileUrl={el.authorId}/>,
                     livePreview: <LivePreview url={el.deploymentLink}/>,
                     code: (<Code url={el.githubLink}/>
                     ),
@@ -69,7 +69,9 @@ export default function data(project, type) {
                 }
             }) :
             [{
-                author: <Author image={team2} name={project.topMonthlyproject.authorName}/>,
+                author: <Author image={team2}
+                                name={project.topMonthlyproject.authorName}
+                                profileUrl={project.topMonthlyproject.authorId}/>,
                 livePreview: <LivePreview url={project.topMonthlyproject.deploymentLink}/>,
                 code: (<Code url={project.topMonthlyproject.githubLink}/>
                 ),

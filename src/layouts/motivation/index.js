@@ -29,7 +29,7 @@ import DataTable from "examples/Tables/DataTable";
 
 // Data
 import projects from './data/mini-projects.json';
-import projectShowcaseTable from "layouts/tables2/data/authorsTableData";
+import projectShowcaseTable from "layouts/motivation/data/authorsTableData";
 
 
 function Tables() {
@@ -40,7 +40,35 @@ function Tables() {
         <DashboardLayout>
             <DashboardNavbar/>
             <MDBox pt={6} pb={3}>
+
                 <Grid container spacing={6}>
+                    <Grid item xs={12} >
+                        <Card>
+                            <MDBox
+                                mx={2}
+                                mt={-3}
+                                py={3}
+                                px={2}
+                                variant="gradient"
+                                bgColor="error"
+                                borderRadius="lg"
+                                coloredShadow="info"
+                            >
+                                <MDTypography variant="h4" color="white">
+                                    [Checkpoint]: Build a recipes website
+                                </MDTypography>
+                            </MDBox>
+                            <MDBox p={5} lineHeight={0}>
+
+                                <MDTypography variant="button" color="text" fontWeight="regular">
+                                    It’s time to practice all of the HTML knowledge you have acquired. In this project, you are going to build a basic recipe website.
+                                    <br />
+                                    <br />
+                                    The website will consist of a main index page which will have links to a few recipes. The website won’t look very pretty by the time you’ve finished. Not unless you’re into brutalist web design, that is.
+                                </MDTypography>
+                            </MDBox>
+                        </Card>
+                    </Grid>
                     <Grid item xs={12}>
                         <Card>
                             <MDBox
@@ -49,7 +77,7 @@ function Tables() {
                                 py={3}
                                 px={2}
                                 variant="gradient"
-                                bgColor="info"
+                                bgColor="error"
                                 borderRadius="lg"
                                 coloredShadow="info"
                             >
@@ -76,7 +104,7 @@ function Tables() {
                                 py={3}
                                 px={2}
                                 variant="gradient"
-                                bgColor="info"
+                                bgColor="error"
                                 borderRadius="lg"
                                 coloredShadow="info"
                             >

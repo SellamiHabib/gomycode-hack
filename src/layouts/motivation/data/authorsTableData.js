@@ -21,8 +21,10 @@ import MDTypography from "components/MDTypography";
 import MDAvatar from "components/MDAvatar";
 import MDBadge from "components/MDBadge";
 // Images
-import team2 from "assets/images/team-1.jpg";
-
+import team1 from "assets/images/team-1.jpg";
+import team2 from "assets/images/team-2.jpg";
+import team3 from "assets/images/team-3.jpg";
+import team4 from "assets/images/team-4.jpg";
 
 export default function data(project, type) {
     const Author = ({image, name, profileUrl}) => (
@@ -56,9 +58,9 @@ export default function data(project, type) {
             {Header: "note", accessor: "note", align: "center"},
         ],
         rows: type === 'top3' ? project.top3Projects.map(el => {
-
+                // let img = require("../../../" + el.authorImg);
                 return {
-                    author: <Author image={team2} name={el.authorName} profileUrl={el.authorId}/>,
+                    author: <Author image={team4} name={el.authorName} profileUrl={el.authorId}/>,
                     livePreview: <LivePreview url={el.deploymentLink}/>,
                     code: (<Code url={el.githubLink}/>
                     ),

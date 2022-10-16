@@ -45,7 +45,6 @@ function BadgesSection() {
             <MDBox pt={1} pb={2} px={2} lineHeight={1.25}>
                 <MDBox display="flex" alignItems="center" mb={0.5} ml={-1.5}>
                     <Grid container>
-
                         <Grid item xs={12} md={6} lg={4}>
                             <MDAvatar src={b1}
                                       alt="profile-image"

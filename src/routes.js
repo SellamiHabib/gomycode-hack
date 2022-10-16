@@ -43,6 +43,8 @@ import Profile from "layouts/motivation/pages/profile";
 import Motivation from "layouts/motivation"
 // @mui icons
 import Icon from "@mui/material/Icon";
+import BadgesPage from "./layouts/motivation/pages/badgesPage";
+import Shop from "./layouts/motivation/pages/shop";
 
 const routes = [
 
@@ -91,7 +93,14 @@ const routes = [
         name: "badges",
         key: "badges",
         route: "/user/:id/badges",
-        // component: <BadgesPage/>,
+        component: <BadgesPage/>,
+    },
+    {
+        type: "",
+        name: "shop",
+        key: "shop",
+        route: "/user/:id/shop",
+        component: <Shop/>,
     }
 ];
 

@@ -22,8 +22,8 @@ import MDAvatar from "components/MDAvatar";
 import MDBadge from "components/MDBadge";
 // Images
 import team1 from "assets/images/team-1.jpg";
-import team2 from "assets/images/placeholder.png";
-import team4 from "assets/images/placeholder.png";
+import team2 from "assets/images/team-4.jpg";
+import team4 from "assets/images/team-4.jpg";
 
 export default function data(project, type) {
     const Author = ({image, name, profileUrl}) => (

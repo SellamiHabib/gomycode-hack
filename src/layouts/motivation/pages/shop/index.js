@@ -72,7 +72,7 @@ function Shop() {
     }, [])
     return (
         <DashboardLayout>
-            <DashboardNavbar/>
+
             <MDBox mb={2}/>
             <Header points={points}>
                 <MDBox mt={5} mb={3} xl={12}>

@@ -35,7 +35,7 @@ import MDAvatar from "components/MDAvatar";
 import breakpoints from "assets/theme/base/breakpoints";
 
 // Images
-import burceMars from "assets/images/placeholder.png";
+import burceMars from "assets/images/team-4.jpg";
 import backgroundImage from "assets/images/bg-profile.jpeg";
 import {useParams} from "react-router-dom";
 import {collection, query, onSnapshot, where, getDocs} from "firebase/firestore"

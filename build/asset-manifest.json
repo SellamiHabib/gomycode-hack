@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.js": "/static/js/main.41540f15.js",
+    "static/media/home-decor-3.jpg": "/static/media/home-decor-3.74d13fcbd3c631fc7908.jpg",
+    "static/media/home-decor-2.jpg": "/static/media/home-decor-2.b4e5397c9846645ba275.jpg",
+    "static/media/home-decor-1.jpg": "/static/media/home-decor-1.05e218fd495ccc65c99d.jpg",
+    "static/media/bg-profile.jpeg": "/static/media/bg-profile.af1219a742e09fc7b612.jpeg",
+    "static/media/b3.png": "/static/media/b3.19a49d4514fdd15b369a.png",
+    "static/media/b9.png": "/static/media/b9.61fd0f8bb7dc72198e00.png",
+    "static/media/b8.png": "/static/media/b8.3578ef0977cdc233bca1.png",
+    "static/media/b1.png": "/static/media/b1.43e058442d27dce44663.png",
+    "static/media/b10.png": "/static/media/b10.cab7e36826055788b021.png",
+    "static/media/b2.png": "/static/media/b2.43d2f86dfa3d8658a1f9.png",
+    "static/media/b7.png": "/static/media/b7.90ff25de1c8babd0a621.png",
+    "static/media/b6.png": "/static/media/b6.40775c53bf175394bad7.png",
+    "static/media/home-decor-4.jpeg": "/static/media/home-decor-4.5b448fd339a14695f6aa.jpeg",
+    "static/media/b4.png": "/static/media/b4.ff933dda3fc7502bd62f.png",
+    "static/media/b5.png": "/static/media/b5.5fd4ff9d9bca5b1eabe2.png",
+    "static/media/team-1.jpg": "/static/media/team-1.0fd36e0ee93dcfacdef8.jpg",
+    "static/media/bruce-mars.jpg": "/static/media/bruce-mars.8a606c4a6dab54c9ceff.jpg",
+    "static/media/marie.jpg": "/static/media/marie.c28f32663b6432b46f78.jpg",
+    "static/media/team-2.jpg": "/static/media/team-2.13ae2ce3e12f4cfed420.jpg",
+    "static/media/team-3.jpg": "/static/media/team-3.0ef0be95e6850814c79e.jpg",
+    "static/media/ivana-square.jpg": "/static/media/ivana-square.f7bc23b269d1d2509c82.jpg",
+    "static/media/kal-visuals-square.jpg": "/static/media/kal-visuals-square.3210e28a48ff572ae88b.jpg",
+    "static/media/team-4.jpg": "/static/media/team-4.85c82b6e60178804017f.jpg",
+    "index.html": "/index.html",
+    "main.41540f15.js.map": "/static/js/main.41540f15.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.41540f15.js"
+  ]
+}

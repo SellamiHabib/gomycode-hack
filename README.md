@@ -7,7 +7,7 @@
 
 
 ## Description
-This repo contains the prototype of part 3 of our presentation in which we introduced improvements to elearning platforms
+This repo contains the prototype of part 3 of our presentation in which we introduced improvements to e-learning platforms.
 
 #### Proposed features :
 
